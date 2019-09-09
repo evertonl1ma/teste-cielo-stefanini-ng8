@@ -1,0 +1,14 @@
+.header {
+	background: #00aeef;
+	padding: 15px;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header__title {
+	color: #FFF;
+	text-shadow: 1px 1px 3px silver;
+}
