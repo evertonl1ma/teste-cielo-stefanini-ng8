@@ -45,3 +45,48 @@ export class HomeComponent implements OnInit {
   		})
   }
 }
+
+export class PaginationComponent implements OnInit {
+  
+  page = {
+  	activePage: 1,
+  	total: 10
+  }
+
+  @Input() total: any
+  @Input() activePage: any;
+
+  numero: number = 3;
+
+  paginationDots : any;
+
+  dots: Pagination;
+  
+  bullets: any;
+
+  constructor() { }
+
+  ngOnInit() {
+  	this.dots = new Pagination()
+  	//this.bullets = this.dots.list(this.page);
+  	//this.paginationDots = this.pagination(this.total, this.activePage)
+  	this.bullets = this.dots.list(this.page);
+  }
+
+  'use strict'
+
+
+teste() {
+	console.log(this.numero)
+	if(this.numero <= 10) {
+		//this.paginationDots = this.pagination(10, this.numero++)
+	}
+}
+
+nextPage() {
+	this.page.activePage = this.page.activePage + 1
+	this.bullets = this.dots.list(this.page);
+
+	console.log(this.page.activePage)
+}
+}
